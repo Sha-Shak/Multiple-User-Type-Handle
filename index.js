@@ -5,9 +5,7 @@ const User = require("./db");
 const uri =
   "mongodb+srv://akram123:test123@cluster0.obt6fow.mongodb.net/FlyAway?retryWrites=true&w=majority";
 const router = express.Router();
-
 const app = express();
-
 app.use(express.json());
 app.use(router);
 
@@ -43,8 +41,8 @@ router.post("/users", async (req, res) => {
   try {
     await mongoose.connect(uri);
     console.log("Database Connected");
-    app.listen(3333, () => {
-      console.log(`Server running on 3333`);
+    app.listen(3331, () => {
+      console.log(`Server running on 3331`);
     });
   } catch (error) {
     console.log(error);
